@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>inject-at-cursor component</title>
+  <!-- <link rel="stylesheet" href="../build/build.css"> -->
+  <style>
+    [contenteditable] {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="editor" contenteditable="true">
+    <h1>inject-at-cursor component</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus perferendis officia similique molestias facere obcaecati architecto sit debitis illo! Repellat quam qui sit perspiciatis atque corporis odit nihil eveniet sunt.</p>
+
+    <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>. Molestiae doloribus quod facilis repellat cupiditate eligendi enim tempore commodi animi nulla dolores possimus debitis sed unde voluptatem ipsum alias veniam nobis.</p>
+
+    <p>Zomg lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae, quam, cumque, itaque provident ipsa alias vel doloremque similique voluptatibus amet cupiditate magnam dolorem inventore delectus eveniet nostrum et vero.</p>
+
+  </div>
+
+  <button id="btn">Inject</button>
+  <input id="txt" type="text" style="width:60%;" value="<em>hi there</em>">
+
+  <script src="../build/build.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var inject = require('inject-at-cursor');
+
+    btn.onclick = function() {
+      inject(txt.value);
+    };
+
+    editor.onkeydown = function(e) {
+      if (83 == e.keyCode) {
+        e.preventDefault();
+        inject(txt.value);
+      }
+    };
+
+  </script>
+</body>
+</html>
