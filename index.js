@@ -36,8 +36,8 @@ function inject(content) {
     sel.removeAllRanges();
 
     // place cursor after content
-    range.selectNode(content.nextSibling);
-    range.collapse(true);
+    range.setEndAfter(content);
+    range.collapse();
 
     // add range to selection
     sel.addRange(range);
