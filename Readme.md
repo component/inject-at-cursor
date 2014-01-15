@@ -11,7 +11,16 @@
 
 ## API
 
+### inject(content)
 
+Inject `content` at the cursor. `content` can either be a text string or some html. Returns the `content` node
+
+## Test
+
+Run tests using [component-test](http://github.com/matthewmueller/component-test):
+
+    npm install component-test
+    make test
 
 ## License
 
