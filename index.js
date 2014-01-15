@@ -20,7 +20,7 @@ module.exports = inject;
  */
 
 function inject(content) {
-  content = domify(content);
+  content = (content.nodeType) ? content : domify(content);
   var sel = selection();
 
   if (sel.getRangeAt && sel.rangeCount) {
