@@ -4,7 +4,6 @@
 
 var domify = require('domify');
 var selection = window.getSelection;
-var insertHTML = document.queryCommandSupported('insertHTML');
 
 /**
  * Expose `inject`
@@ -21,13 +20,14 @@ module.exports = inject;
  */
 
 function inject(content) {
-  if (insertHTML) return document.execCommand('insertHTML', false, content);
-
   content = (content.nodeType) ? content : domify(content);
   var sel = selection();
 
   if (sel.getRangeAt && sel.rangeCount) {
     var range = sel.getRangeAt(0);
+
+    // support document fragments
+    var end = (11 == content.nodeType) ? content.lastChild : content;
 
     // remove selected content (if any)
     range.deleteContents();
@@ -39,7 +39,7 @@ function inject(content) {
     sel.removeAllRanges();
 
     // place cursor after content
-    range.setEndAfter(content);
+    range.setEndAfter(end);
     range.collapse();
 
     // add range to selection

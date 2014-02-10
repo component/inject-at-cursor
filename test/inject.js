@@ -37,6 +37,15 @@ describe('inject(content)', function() {
     assert('hi there, <strong>mary</strong>jane!' == el.innerHTML);
   });
 
+  it('should support document fragments', function() {
+    selectAt(el, 'j');
+    var frag = document.createDocumentFragment();
+    var strong = domify('<strong>mary</strong>');
+    frag.appendChild(strong);
+    inject(frag);
+    assert('hi there, <strong>mary</strong>jane!' == el.innerHTML);
+  })
+
   // TODO: fix me. Getting the selection node / offset is different
   // on safari and firefox. Should be fixed in another component..
   //
