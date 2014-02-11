@@ -1,0 +1,21 @@
+{
+  "name": "component-inject-at-cursor",
+  "repo": "component/inject-at-cursor",
+  "description": "inject a string or dom node at the cursor",
+  "version": "0.0.4",
+  "keywords": [],
+  "dependencies": {
+    "component-domify": "1.2.2"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "component": {
+    "scripts": {
+      "inject-at-cursor/index.js": "index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/inject-at-cursor.git"
+  }
+}
