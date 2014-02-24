@@ -1,6 +1,5 @@
 {
   "name": "component-inject-at-cursor",
-  "repo": "component/inject-at-cursor",
   "description": "inject a string or dom node at the cursor",
   "version": "0.0.5",
   "keywords": [],
