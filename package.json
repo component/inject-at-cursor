@@ -4,7 +4,7 @@
   "version": "0.0.5",
   "keywords": [],
   "dependencies": {
-    "component-domify": "1.2.2"
+    "domify": "1.2.2"
   },
   "license": "MIT",
   "main": "index.js",
