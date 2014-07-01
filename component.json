@@ -5,7 +5,7 @@
   "version": "0.0.5",
   "keywords": [],
   "dependencies": {
-    "component/domify": "1.2.0"
+    "component/domify": "1.2.2"
   },
   "development": {
     "component/assert": "*"
