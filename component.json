@@ -2,7 +2,7 @@
   "name": "inject-at-cursor",
   "repo": "component/inject-at-cursor",
   "description": "inject a string or dom node at the cursor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [],
   "dependencies": {
     "component/domify": "1.2.2"

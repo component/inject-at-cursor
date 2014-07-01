@@ -1,4 +1,12 @@
 
+0.0.6 / 2014-06-30
+==================
+
+ * component: update "component/domify" to v1.2.2
+ * package: rename to "inject-at-cursor"
+ * package: use "domify" package
+ * package: remove "repo" field
+
 0.0.5 / 2014-02-11
 ==================
 
