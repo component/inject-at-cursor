@@ -44,9 +44,6 @@ function inject(content) {
 
     // add range to selection
     sel.addRange(range);
-
-    // discard range
-    range.detach();
   }
 
   return content;
